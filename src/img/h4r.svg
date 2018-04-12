@@ -15,7 +15,7 @@
    id="svg4170"
    version="1.1"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="h4 0.2 - round.svg">
+   sodipodi:docname="h4r.svg">
   <defs
      id="defs4172" />
   <sodipodi:namedview
@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="25.789323"
+     inkscape:cx="57.289323"
      inkscape:cy="158.65811"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -83,7 +83,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -93,7 +93,7 @@
      id="layer1"
      transform="translate(0,-722.3622)">
     <path
-       style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 135,10 c -5,0 -5,0 -5,5 v 110.00586 c 0,2.2538 -0.52143,3.22847 -2.11133,4.99805 L 68.458984,196.15039 C 65.000754,199.99944 63.226863,200 60.070312,200 H 15 c -5.0000004,0 -5,0.0185 -5,-5 v -60 c 0,-5 0,-5 -5,-5 C 5e-8,130 0,130 0,135 v 140 c 0,5 -0.01845995,5 5,5 5,0 5,0.0185 5,-5 v -60 c 0,-5 -0.01846,-5 5,-5 h 48.408203 c 1.6967,0 5.44197,-8.9e-4 9.474609,-3.50781 L 184.99114,81.18453 C 190,75.703689 190,76.864048 190,82.524742 V 195 c 0,5 0.0185,5 -5,5 h -50 c -5,0 -5,-0.0185 -5,5 v 130 c 0,5 -0.0185,5 5,5 5,0 5,0.018 5,-5 V 215 c 0,-5 -0.0185,-5 5,-5 h 40 c 5,0 5,-0.0185 5,5 v 50 c 0,5 -0.0185,5 5,5 5,0 5,0.0185 5,-5 v -50 c 0,-5 -0.0185,-5 5,-5 h 50 c 4.875,0 5,-0.0601 5,-5 0,-5 0.0185,-5 -5,-5 h -50 c -5,0 -5,0 -5,-5 V 54.947578 C 200,50 200,48.93934 195.47119,54.201428 L 143.60938,112.42383 C 141.40265,114.99985 140,115 140,111.0625 V 15 c 0,-5 0,-5 -5,-5 z"
        transform="translate(0,712.3622)"
        id="rect4539"

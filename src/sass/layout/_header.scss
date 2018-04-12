@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .appHeader {
+  position: relative;
   height: .75rem;
   overflow: visible;
   border-bottom: 1px dashed $color-mid-grey;
@@ -18,15 +19,37 @@
     padding: 0 1rem;
     background: $color-background;
     color: $color-mid-grey;
+  }
+
+  .db {
+    display: inline-block;
+    transition: transform 1s ease-out;
+
+    &:hover {
+      transform: rotate(1800deg);
+    }
 
     span {
-      &:nth-of-type(1){
-        color: red;
+      &:nth-of-type(1) {
+        color: $color-red;
       }
 
-      &:nth-of-type(2){
-        color: white;
+      &:nth-of-type(2) {
+        color: $color-white;
       }
     }
+  }
+
+  &__copyright {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    width: 27px;
+    height: 33px;
+    background: url(../../img/h4r.svg) no-repeat black;
+    background-size: 100%;
+    box-shadow: 0 0 10px 10px black;
   }
 }
