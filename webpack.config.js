@@ -6,7 +6,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        app: __dirname + '/src/js/app.js'
+        app: __dirname + '/src/js/app.jsx'
     },
     module: {
         rules: [
@@ -79,6 +79,7 @@ module.exports = {
     },
     devServer: {
         contentBase: __dirname + '/dist',
+        historyApiFallback: true,
         publicPath: '/',
         headers: {
             'Access-Control-Allow-Origin': '*'

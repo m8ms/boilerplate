@@ -4,7 +4,9 @@
 
 .appHeader {
   position: relative;
+  max-width: 960px;
   height: .75rem;
+  margin: auto;
   overflow: visible;
   border-bottom: 1px dashed $color-mid-grey;
 
@@ -13,6 +15,7 @@
   font-weight: 300;
   line-height: 1.5rem;
   text-align: center;
+
 
   &__logo {
     display: inline-block;
@@ -38,18 +41,5 @@
         color: $color-white;
       }
     }
-  }
-
-  &__copyright {
-    content: '';
-    display: block;
-    position: absolute;
-    top: -0.5rem;
-    right: -0.5rem;
-    width: 27px;
-    height: 33px;
-    background: url(../../img/h4r.svg) no-repeat black;
-    background-size: 100%;
-    box-shadow: 0 0 10px 10px black;
   }
 }

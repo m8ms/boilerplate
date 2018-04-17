@@ -3,9 +3,6 @@
 // -----------------------------------------------------------------------------
 
 
-/// Main brand color
-/// @type Color
-$color-brand: rgb(229, 0, 80) !default;
 
 /// Light grey
 /// @type Color
@@ -28,6 +25,11 @@ $color-red: rgb(233, 0, 0) !default;
 /// Background color
 /// @type Color
 $color-background: rgb(0, 0, 0) !default;
+
+
+/// Main brand color
+/// @type Color
+$color-brand: $color-red !default;
 
 /// Copy text color
 /// @type Color
