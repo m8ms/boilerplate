@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with no query 1`] = `
+<form
+  className="search-box"
+  onSubmit={[Function]}
+>
+  <input
+    className="search-box__input"
+    onChange={[Function]}
+    placeholder="search"
+    type="text"
+    value=""
+  />
+  <button
+    className="search-box__submit"
+  />
+</form>
+`;

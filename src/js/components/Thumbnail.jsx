@@ -5,7 +5,7 @@ class Gallery extends React.Component {
 
     static defaultProps = {
         item: {}
-    }
+    };
 
     constructor(props) {
         super(props);
@@ -30,7 +30,7 @@ class Gallery extends React.Component {
         return (
             <Link to={this.getLink()}>
                 <img className="thumbnail__image" src={this.getThumbnailSrc()} alt={this.props.item.id}/>
-                <div className="thumbnail__info">{this.props.item.is_album ? 'alubm' : 'image'}</div>
+                <div className="thumbnail__info">{this.props.item.is_album ? 'album' : 'image'}</div>
             </Link>
         )
 

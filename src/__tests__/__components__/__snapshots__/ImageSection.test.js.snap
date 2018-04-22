@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with item 1`] = `
+<div
+  className="image-section"
+>
+  <div
+    className="image-section__image-wrap"
+  >
+    <img
+      className="image-section__image"
+      src="https://i.imgur.com/GRDXXdF.png"
+    />
+  </div>
+  <div
+    className="image-section__image-meta"
+  >
+    <div
+      className="image-section__title"
+    />
+    <div
+      className="image-section__description"
+    >
+      Sorry I haven't been uploading stuff like this lately. Hopefully this'll make up for it.
+    </div>
+    <div
+      className="image-section__views-count"
+    >
+      3965
+       views
+    </div>
+    <div
+      className="image-section__date"
+    >
+      April 8, 2018 11:49 PM
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with modifiers 1`] = `
+<div
+  className="image-section"
+>
+  <div
+    className="image-section__image-wrap"
+  >
+    <img
+      className="image-section__image"
+      src="https://i.imgur.com/GRDXXdF.png"
+    />
+  </div>
+  <div
+    className="image-section__image-meta"
+  >
+    <div
+      className="image-section__title"
+    />
+    <div
+      className="image-section__description"
+    >
+      Sorry I haven't been uploading stuff like this lately. Hopefully this'll make up for it.
+    </div>
+    <div
+      className="image-section__views-count"
+    >
+      3965
+       views
+    </div>
+    <div
+      className="image-section__date"
+    >
+      April 8, 2018 11:49 PM
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with no item 1`] = `
+<div
+  className="image-section"
+>
+  <div
+    className="image-section__image-wrap"
+  >
+    <img
+      className="image-section__image"
+      src={undefined}
+    />
+  </div>
+  <div
+    className="image-section__image-meta"
+  >
+    <div
+      className="image-section__title"
+    />
+    <div
+      className="image-section__description"
+    />
+    <div
+      className="image-section__views-count"
+    >
+       views
+    </div>
+    <div
+      className="image-section__date"
+    >
+      
+    </div>
+  </div>
+</div>
+`;

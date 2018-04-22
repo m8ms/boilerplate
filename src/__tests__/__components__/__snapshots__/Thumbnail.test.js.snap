@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with children 1`] = `
+<div
+  className="thumbnail"
+>
+  <div
+    className="thumbnail__content"
+  >
+    <span>
+      child
+    </span>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with item 1`] = `
+<div
+  className="thumbnail"
+>
+  <div
+    className="thumbnail__content"
+  >
+    <a
+      href="/image/GRDXXdF"
+      onClick={[Function]}
+    >
+      <img
+        alt="GRDXXdF"
+        className="thumbnail__image"
+        src="https://i.imgur.com/GRDXXdFb.jpg"
+      />
+      <div
+        className="thumbnail__info"
+      >
+        image
+      </div>
+    </a>
+  </div>
+</div>
+`;

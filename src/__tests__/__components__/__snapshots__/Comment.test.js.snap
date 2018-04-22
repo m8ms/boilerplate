@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with children 1`] = `
+<div
+  className="comment"
+>
+  <div
+    className="comment__author"
+  >
+    <div
+      className="comment__username"
+    >
+      whalesurfertoo
+    </div>
+    <div
+      className="comment__points"
+    >
+      5pts
+    </div>
+    <div
+      className="comment__date"
+    >
+      14 days ago
+    </div>
+  </div>
+  <div
+    className="comment__content"
+  >
+    Always upvote Poland ball
+  </div>
+  <div
+    className="comment__sub-comments"
+  >
+    <div
+      className="comment comment--sub-comment"
+    >
+      <div
+        className="comment__author"
+      >
+        <div
+          className="comment__username"
+        >
+          ThatOneGeographyNerd
+        </div>
+        <div
+          className="comment__points"
+        >
+          5pts
+        </div>
+        <div
+          className="comment__date"
+        >
+          14 days ago
+        </div>
+      </div>
+      <div
+        className="comment__content"
+      >
+        Unless it has advanced tools. Then no. xd
+      </div>
+      <div
+        className="comment__sub-comments"
+      >
+        <div
+          className="comment comment--sub-comment"
+        >
+          <div
+            className="comment__author"
+          >
+            <div
+              className="comment__username"
+            >
+              whalesurfertoo
+            </div>
+            <div
+              className="comment__points"
+            >
+              1pt
+            </div>
+            <div
+              className="comment__date"
+            >
+              14 days ago
+            </div>
+          </div>
+          <div
+            className="comment__content"
+          >
+            True
+          </div>
+          <div
+            className="comment__sub-comments comment__sub-comments--empty"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with no children 1`] = `
+<div
+  className="comment"
+>
+  <div
+    className="comment__author"
+  >
+    <div
+      className="comment__username"
+    >
+      SeaPrince
+    </div>
+    <div
+      className="comment__points"
+    >
+      1pt
+    </div>
+    <div
+      className="comment__date"
+    >
+      21 days ago
+    </div>
+  </div>
+  <div
+    className="comment__content"
+  >
+    I think Mexico likes Canada in this situation and called the US bumfuckers.
+  </div>
+  <div
+    className="comment__sub-comments comment__sub-comments--empty"
+  />
+</div>
+`;

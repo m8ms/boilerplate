@@ -1,0 +1,400 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with album 1`] = `
+<div
+  className="album"
+>
+  <header
+    className="album__header"
+  >
+    <h3
+      className="album__title"
+    >
+      Rovings the smerr of fresh air - A Polandball Comic
+    </h3>
+    <div
+      className="album__author"
+    >
+       by 
+      ThatOneGeographyNerd
+    </div>
+    <div
+      className="album__image-count"
+    >
+      Images in album: 
+      1
+    </div>
+  </header>
+  <div
+    className="slick-slider slick-initialized"
+  >
+    
+    <div
+      className="slick-list"
+    >
+      <div
+        className="slick-track"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "WebkitTransform": "translate3d(0px, 0px, 0px)",
+            "WebkitTransition": "",
+            "msTransform": "translateX(0px)",
+            "opacity": 1,
+            "transform": "translate3d(0px, 0px, 0px)",
+            "transition": "",
+          }
+        }
+      >
+        <div
+          aria-hidden={false}
+          className="slick-slide slick-active slick-current"
+          data-index={0}
+          onClick={[Function]}
+          style={
+            Object {
+              "outline": "none",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              className="image-section"
+            >
+              <div
+                className="image-section__image-wrap"
+              >
+                <img
+                  className="image-section__image"
+                  src="https://i.imgur.com/GRDXXdF.png"
+                />
+              </div>
+              <div
+                className="image-section__image-meta"
+              >
+                <div
+                  className="image-section__title"
+                />
+                <div
+                  className="image-section__description"
+                >
+                  Sorry I haven't been uploading stuff like this lately. Hopefully this'll make up for it.
+                </div>
+                <div
+                  className="image-section__views-count"
+                >
+                  3965
+                   views
+                </div>
+                <div
+                  className="image-section__date"
+                >
+                  April 8, 2018 11:49 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+</div>
+`;
+
+exports[`renders correctly with album and comments 1`] = `
+<div
+  className="album"
+>
+  <header
+    className="album__header"
+  >
+    <h3
+      className="album__title"
+    >
+      Rovings the smerr of fresh air - A Polandball Comic
+    </h3>
+    <div
+      className="album__author"
+    >
+       by 
+      ThatOneGeographyNerd
+    </div>
+    <div
+      className="album__image-count"
+    >
+      Images in album: 
+      1
+    </div>
+  </header>
+  <div
+    className="slick-slider slick-initialized"
+  >
+    
+    <div
+      className="slick-list"
+    >
+      <div
+        className="slick-track"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "WebkitTransform": "translate3d(0px, 0px, 0px)",
+            "WebkitTransition": "",
+            "msTransform": "translateX(0px)",
+            "opacity": 1,
+            "transform": "translate3d(0px, 0px, 0px)",
+            "transition": "",
+          }
+        }
+      >
+        <div
+          aria-hidden={false}
+          className="slick-slide slick-active slick-current"
+          data-index={0}
+          onClick={[Function]}
+          style={
+            Object {
+              "outline": "none",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              className="image-section"
+            >
+              <div
+                className="image-section__image-wrap"
+              >
+                <img
+                  className="image-section__image"
+                  src="https://i.imgur.com/GRDXXdF.png"
+                />
+              </div>
+              <div
+                className="image-section__image-meta"
+              >
+                <div
+                  className="image-section__title"
+                />
+                <div
+                  className="image-section__description"
+                >
+                  Sorry I haven't been uploading stuff like this lately. Hopefully this'll make up for it.
+                </div>
+                <div
+                  className="image-section__views-count"
+                >
+                  3965
+                   views
+                </div>
+                <div
+                  className="image-section__date"
+                >
+                  April 8, 2018 11:49 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+  <div
+    className="comments"
+  >
+    <h3
+      className="comments__header"
+    >
+      Comments
+    </h3>
+    <div
+      className="comments__list"
+    >
+      <div
+        className="comment"
+      >
+        <div
+          className="comment__author"
+        >
+          <div
+            className="comment__username"
+          >
+            whalesurfertoo
+          </div>
+          <div
+            className="comment__points"
+          >
+            5pts
+          </div>
+          <div
+            className="comment__date"
+          >
+            14 days ago
+          </div>
+        </div>
+        <div
+          className="comment__content"
+        >
+          Always upvote Poland ball
+        </div>
+        <div
+          className="comment__sub-comments"
+        >
+          <div
+            className="comment comment--sub-comment"
+          >
+            <div
+              className="comment__author"
+            >
+              <div
+                className="comment__username"
+              >
+                ThatOneGeographyNerd
+              </div>
+              <div
+                className="comment__points"
+              >
+                5pts
+              </div>
+              <div
+                className="comment__date"
+              >
+                14 days ago
+              </div>
+            </div>
+            <div
+              className="comment__content"
+            >
+              Unless it has advanced tools. Then no. xd
+            </div>
+            <div
+              className="comment__sub-comments"
+            >
+              <div
+                className="comment comment--sub-comment"
+              >
+                <div
+                  className="comment__author"
+                >
+                  <div
+                    className="comment__username"
+                  >
+                    whalesurfertoo
+                  </div>
+                  <div
+                    className="comment__points"
+                  >
+                    1pt
+                  </div>
+                  <div
+                    className="comment__date"
+                  >
+                    14 days ago
+                  </div>
+                </div>
+                <div
+                  className="comment__content"
+                >
+                  True
+                </div>
+                <div
+                  className="comment__sub-comments comment__sub-comments--empty"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="comment"
+      >
+        <div
+          className="comment__author"
+        >
+          <div
+            className="comment__username"
+          >
+            SeaPrince
+          </div>
+          <div
+            className="comment__points"
+          >
+            1pt
+          </div>
+          <div
+            className="comment__date"
+          >
+            21 days ago
+          </div>
+        </div>
+        <div
+          className="comment__content"
+        >
+          I think Mexico likes Canada in this situation and called the US bumfuckers.
+        </div>
+        <div
+          className="comment__sub-comments comment__sub-comments--empty"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with no data 1`] = `
+<div
+  className="album"
+>
+  <header
+    className="album__header"
+  >
+    
+    
+    <div
+      className="album__image-count"
+    >
+      Images in album: 
+       
+    </div>
+  </header>
+  <div
+    className="slick-slider slick-initialized"
+  >
+    
+    <div
+      className="slick-list"
+    >
+      <div
+        className="slick-track"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "WebkitTransform": "translate3d(0px, 0px, 0px)",
+            "WebkitTransition": "",
+            "msTransform": "translateX(0px)",
+            "opacity": 1,
+            "transform": "translate3d(0px, 0px, 0px)",
+            "transition": "",
+          }
+        }
+      />
+    </div>
+    
+    
+  </div>
+</div>
+`;

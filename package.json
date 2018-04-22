@@ -75,6 +75,11 @@
         "unmockedModulePathPatterns": [
             "node_modules/alt",
             "alt.js"
-        ]
+        ],
+        "testPathIgnorePatterns": [
+            "/node_modules/",
+            "/__fixtures__/"
+        ],
+        "setupTestFrameworkScriptFile": "./src/setupTests.js"
     }
 }
