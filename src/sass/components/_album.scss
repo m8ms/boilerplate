@@ -1,0 +1,19 @@
+
+.album {
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    margin: 0 .5rem 0 0;
+  }
+
+  &__author {
+    flex-grow: 1;
+    margin-right: .5rem
+  }
+
+}

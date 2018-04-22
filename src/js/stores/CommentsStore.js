@@ -9,7 +9,7 @@ class CommentsStore {
         this.comments = {};
 
         this.bindListeners({
-            handleGetComment: CommentsActions.GET_COMMENTS
+            handleUpdateComments: CommentsActions.updateComments
         });
 
         this.exportPublicMethods({
@@ -17,14 +17,14 @@ class CommentsStore {
         });
     }
 
-    handleGetComment(comment = {}) {
-        if (comment.id){
-            this.comments[id] = comment
+    handleUpdateComments({comments, parentId}) {
+        if (parentId){
+            this.comments[parentId] = comments;
         }
     }
 
-    getCommentsFor = (imgId) => {
-        return this.comments[imgId];
+    getCommentsFor = (parentId) => {
+        return this.comments[parentId];
     }
 }
 

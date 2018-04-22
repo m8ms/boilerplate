@@ -1,20 +1,17 @@
 import React from 'react';
 import AltContainer from 'alt-container';
 
-import CommentsActions from '../actions/CommentsActions';
-import CommentsStore from '../stores/CommentsStore';
-
 import ImagesActions from '../actions/ImagesActions';
 import ImagesStore from '../stores/ImagesStore';
 
 import ImageSection from '../components/ImageSection';
 
-function commentsFetcher(props){
-    return {
-        store: CommentsStore,
-        value: CommentsStore.getCommentsFor(props.imgId)
-    };
 
+function item(props) {
+    return {
+        store: ImagesStore,
+        value: ImagesStore.getImageById(props.imageId)
+    };
 }
 
 class ImagePage extends React.Component {
@@ -22,18 +19,18 @@ class ImagePage extends React.Component {
     constructor(props) {
         super(props);
 
-        ImagesActions.getCurrentImage(this.props.match.params.id);
-        CommentsActions.getComments(this.props.match.params.id);
+        const imageId = this.props.match.params.id;
+
+        if (!ImagesStore.getImageById(imageId)) {
+            ImagesActions.fetchImage(imageId);
+        }
     }
 
-    render() {
+    render(){
         return (
             <div id="image-page">
-                <AltContainer imgId={this.props.match.params.id} stores={{
-                      ImagesStore,
-                      comments: commentsFetcher
-                    }}>
-                    <ImageSection/>
+                <AltContainer imageId={this.props.match.params.id} stores={{item}}>
+                    <ImageSection modifier="single"/>
                 </AltContainer>
             </div>
         )

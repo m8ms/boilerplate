@@ -1,0 +1,31 @@
+
+.search-box {
+  position: relative;
+  padding-left: 1rem;
+  background: $color-background;
+
+  &__input {
+    display: block;
+    height: 1.5rem;
+    padding: .0625rem 1.5rem .0625rem .25rem;
+    border: 1px solid $color-mid-grey;
+    background: $color-background;
+
+    color: $color-mid-grey;
+
+    font-size: $font-size-regular;
+  }
+
+  &__submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0;
+    background: url(../../img/search.svg) no-repeat center;
+    background-size: 60% 60%;
+
+    cursor: pointer;
+  }
+}

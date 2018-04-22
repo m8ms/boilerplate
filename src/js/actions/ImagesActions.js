@@ -1,42 +1,42 @@
 import alt from '../alt';
 import ImgurService from '../services/ImgurService';
-import ImagesStore from '../stores/ImagesStore';
 
 class ImagesActions {
 
-
-    updateImages(images, page) {
-        return {images, page};
+    updateItems(items, query, page) {
+        return {items, page, query};
     }
 
-    setCurrentImage(image) {
-        return image
+    setSingleAlbum(item) {
+        return item;
     }
 
-    getCurrentImage(imgId) {
-        const currentImageFromStore = ImagesStore.getState().images.find(img => img.id === imgId);
+    setSingleImage(item) {
+        return item;
+    }
 
-        if (currentImageFromStore) {
-            return this.setCurrentImage(currentImageFromStore);
-        }
-
-        return ImgurService.fetchImage(imgId)
+    fetchAlbum(albumId) {
+        return ImgurService.fetchAlbum(albumId)
             .then(response => {
-                this.setCurrentImage(response.data.data);
+                this.setSingleAlbum(response.data.data);
             })
-            .catch(err => {
-                console.error(err);
-            })
+            .catch(console.error)
     }
 
-    fetchImages(page = 1) {
-        return ImgurService.fetchPage(page)
+    fetchImage(imageId) {
+        return ImgurService.fetchImage(imageId)
             .then(response => {
-                this.updateImages(response.data.data, page);
+                this.setSingleImage(response.data.data);
             })
-            .catch(err => {
-                console.error(err);
+            .catch(console.error)
+    }
+
+    search(query, page) {
+        return ImgurService.search(query, page)
+            .then(response => {
+                this.updateItems(response.data.data, query, page);
             })
+            .catch(console.error)
     }
 }
 

@@ -1,0 +1,60 @@
+
+.comment {
+  position: relative;
+  margin-bottom: 1rem;
+
+  &:last-child {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: .5rem;
+      height: .5rem;
+      background: black;
+
+    }
+  }
+
+  &__author {
+    display: flex;
+    margin: 0 .5rem .5rem;
+  }
+
+  &__username {
+    margin-right: 1rem;
+    font-weight: bold;
+  }
+
+  &__points,
+  &__date {
+    margin-right: 1rem;
+  }
+
+  &__content {
+    padding: .5rem;
+    background: $color-dark-grey;
+    color: #FFF;
+
+    @include up-arrow {
+      left: 2rem;
+    }
+  }
+
+  &__sub-comments {
+    margin-left: 1rem;
+    padding-top: .5rem;
+    border-left: 1px dashed $color-very-dark-grey;
+
+    &--empty {
+      border-color: transparent;
+    }
+  }
+
+  &--sub-comment {
+    margin-bottom: 0;
+    margin-left: -1px;
+    //border-color: transparent;
+  }
+}

@@ -6,9 +6,13 @@ import Thumbnail from  './Thumbnail';
 
 class Gallery extends React.Component {
 
+    getMore = () => {
+        this.props.getMore(this.props.ImageStore.currentPage);
+    };
+
     render() {
-        const images = this.props.ImagesStore.images || [];
-        const items = images.map(img => <Thumbnail key={img.id} image={img}/>);
+        const itemsFromStore = this.props.ImagesStore.items || [];
+        const items = itemsFromStore.map(item => <Thumbnail key={item.id} item={item}/>);
         return (
             <InfiniteScroll pageStart={this.props.ImagesStore.currentPage - 1}
                             loadMore={this.props.getMore}
@@ -16,7 +20,7 @@ class Gallery extends React.Component {
                             className="gallery"
                             loader={<div key={0} className="gallery__loader"><div className="loader"/></div>}>
                 {items}
-                {!this.props.ImagesStore.hasMore && <Thumbnail noMore/>}
+                {!this.props.ImagesStore.hasMore && <h3 className="gallery__end">- fin -</h3>}
             </InfiniteScroll>
         )
     }

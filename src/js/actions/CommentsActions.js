@@ -3,11 +3,15 @@ import ImgurService from '../services/ImgurService';
 
 class CommentsActions {
 
-    getComments(imgId) {
+    updateComments(comments, parentId) {
+        return {comments, parentId};
+    }
 
-
-        return ImgurService.fetchComments(imgId)
-            .then(response => response.data.data)
+    fetchComments(parentId) {
+        return ImgurService.fetchComments(parentId)
+            .then(response => {
+                this.updateComments(response.data.data, parentId)
+            })
             .catch(err => {
                 console.error(err);
                 return [];

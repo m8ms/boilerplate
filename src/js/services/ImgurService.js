@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const imgurFetch = axios.create({
     baseURL: 'https://api.imgur.com/3/',
-    timeout: 1000,
+    timeout: 5000,
     headers: {'Authorization': 'Client-ID ee0283263459862'}
 });
 
@@ -16,16 +16,23 @@ const GALLERY = 'polandball';
 
 export default {
 
-    fetchPage(page = 1, sort = 'time', window = 'all') {
-        return imgurFetch.get(`gallery/search/${sort}/${page}/?q=${GALLERY}`);
+    search(query = '', page = 0, sort = 'time') {
+        if (query) {
+            query = ' AND ' + query;
+        }
+        return imgurFetch.get(`gallery/search/${sort}/${page}/?q=${GALLERY}${query}`);
         //return imgurFetch.get(`gallery/r/${GALLERY}/${sort}/${window}/${page}`)
     },
 
     fetchImage(id) {
-        return imgurFetch.get(`image/${id}`)
+        return imgurFetch.get(`image/${id}`);
+    },
+
+    fetchAlbum(id) {
+        return imgurFetch.get(`gallery/${id}`);
     },
 
     fetchComments(imgId) {
-        return imgurFetch.get(`gallery//${imgId}/comments`)
+        return imgurFetch.get(`gallery/${imgId}/comments`);
     }
 }
