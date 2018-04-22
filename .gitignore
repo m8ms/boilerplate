@@ -10,5 +10,4 @@ dist/*
 /dist/
 /.babel-cache/
 .babel-cache/
-src/__tests__/
 stats.json

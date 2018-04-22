@@ -19,10 +19,13 @@ export default {
     },
 
     printDate(posix, format = 'LLL') {
-        const date = moment(posix * 1000);
 
-        if (date.isValid()) {
-            return date.format(format);
+        if (posix) {
+            const date = moment(posix * 1000);
+
+            if (date.isValid()) {
+                return date.format(format);
+            }
         }
         return '';
     }
