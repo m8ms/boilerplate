@@ -1,10 +1,9 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
-const path = require('path');
+const webpack = require('webpack');
 
 
-module.exports = {
+const config = {
     entry: {
         app: __dirname + '/src/js/app.jsx'
     },
@@ -14,17 +13,23 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: [
-                    'babel-loader',
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            cacheDirectory: './.babel-cache'
+                        }
+                    },
                     'eslint-loader'
                 ]
             },
             {
                 test: /\.(s*)css$/,
                 exclude: /node_modules/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: ['css-loader', 'fast-sass-loader']
-                })
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'fast-sass-loader'
+                ]
             },
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
@@ -59,30 +64,25 @@ module.exports = {
         ]
     },
     plugins: [
-        new StyleLintPlugin({
-            configFile: __dirname + '/src/sass/stylelint.config.js',
-        }),
         new HtmlWebPackPlugin({
             template: __dirname + '/src/index.html'
         }),
-        new ExtractTextPlugin({filename: '[name]-[hash].css'})
+        new MiniCssExtractPlugin({
+            filename: '[name]-[hash].css',
+            chunkFilename: '[id].css'
+        }),
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     ],
 
-    devtool: 'eval-source-map',
     resolve: {
         extensions: ['*', '.js', '.jsx']
     },
+
     output: {
         path: __dirname + '/dist',
         publicPath: '/',
         filename: '[name]-[hash].js'
-    },
-    devServer: {
-        contentBase: __dirname + '/dist',
-        historyApiFallback: true,
-        publicPath: '/',
-        headers: {
-            'Access-Control-Allow-Origin': '*'
-        }
     }
 };
+
+module.exports = config;
