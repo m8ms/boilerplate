@@ -68,7 +68,7 @@ const config = {
             template: __dirname + '/src/index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: '[name]-[hash].css',
+            filename: '[name]-[chunkhash].css',
             chunkFilename: '[id].css'
         }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
@@ -81,7 +81,7 @@ const config = {
     output: {
         path: __dirname + '/dist',
         publicPath: '/',
-        filename: '[name]-[hash].js'
+        filename: '[name]-[chunkhash].js'
     }
 };
 

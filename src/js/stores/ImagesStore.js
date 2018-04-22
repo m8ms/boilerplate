@@ -1,7 +1,7 @@
 import ImagesActions from '../actions/ImagesActions';
 import alt from '../alt';
 
-class ImagesStore {
+export class ImagesStore {
     constructor() {
         this.items = [];
         this.albumsById = {};
@@ -12,9 +12,9 @@ class ImagesStore {
         this.currentQuery = '';
 
         this.bindListeners({
-            handleUpdateItems: ImagesActions.updateItems,
-            handleSetSingleAlbum: ImagesActions.setSingleAlbum,
-            handleSetSingleImage: ImagesActions.setSingleImage
+            handleUpdateItems: ImagesActions.UPDATE_ITEMS,
+            handleSetSingleAlbum: ImagesActions.SET_SINGLE_ALBUM,
+            handleSetSingleImage: ImagesActions.SET_SINGLE_IMAGE
         });
 
         this.exportPublicMethods({
@@ -52,17 +52,12 @@ class ImagesStore {
 
     handleUpdateItems({page = 1, items = [], query = ''}) {
 
-        //console.log(page, items.length, this.currentPage);
-        //for (const item of items) {
-        //    item.page = this.currentPage;
-        //}
-
         if (query !== this.currentQuery) {
             this.currentQuery = query;
             this.alreadyDownloadedIds = {};
             this._storeByIds(items);
             this.items = items;
-            this.currentPage = page + 1;
+            this.currentPage = page;
 
             this.hasMore = !!(items.length);
 
@@ -73,7 +68,7 @@ class ImagesStore {
         } else {
             this._storeByIds(items);
             this.items = [...this.items, ...items];
-            this.currentPage = page + 1;
+            this.currentPage = page;
             this.hasMore = true;
         }
     }

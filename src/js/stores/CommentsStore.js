@@ -2,14 +2,12 @@ import alt from '../alt';
 
 import CommentsActions from '../actions/CommentsActions';
 
-
-
-class CommentsStore {
+export class CommentsStore {
     constructor() {
         this.comments = {};
 
         this.bindListeners({
-            handleUpdateComments: CommentsActions.updateComments
+            handleUpdateComments: CommentsActions.UPDATE_COMMENTS
         });
 
         this.exportPublicMethods({

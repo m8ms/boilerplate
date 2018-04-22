@@ -33,8 +33,6 @@ class MainPage extends React.Component {
     }
 
     render() {
-
-        console.log(this.state);
         return (
             <div id="main-page">
                 <AltContainer stores={{ImagesStore}}>
