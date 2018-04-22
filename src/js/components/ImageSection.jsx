@@ -1,6 +1,10 @@
 import React from 'react';
 import utils from '../helpers/utils';
 
+
+/**
+ * todo comment
+ */
 class ImageSection extends React.Component {
 
     static defaultProps = {

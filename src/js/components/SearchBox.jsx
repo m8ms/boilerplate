@@ -1,5 +1,9 @@
 import React from 'react';
 import { withRouter } from 'react-router';
+
+/**
+ * todo comment
+ */
 class SearchBox extends React.Component {
 
     constructor(props) {

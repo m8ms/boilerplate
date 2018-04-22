@@ -2,7 +2,14 @@ import alt from '../alt';
 
 import CommentsActions from '../actions/CommentsActions';
 
+/**
+ * Holds Comments.
+ *
+ * Comments are stored in a map per `parentId`, where parent is album or gallery.
+ *
+ */
 export class CommentsStore {
+
     constructor() {
         this.comments = {};
 
@@ -11,17 +18,30 @@ export class CommentsStore {
         });
 
         this.exportPublicMethods({
-            getCommentsFor: this.getCommentsFor
+            getCommentsFor: this.getCommentsById
         });
     }
 
+
+    /**
+     * Listens to: `CommentsActions.UPDATE_COMMENTS`
+     * Stores comment in a map per `parentId`
+     *
+     * @param {object[]} comments
+     * @param {string|number} parentId
+     */
     handleUpdateComments({comments, parentId}) {
         if (parentId){
             this.comments[parentId] = comments;
         }
     }
 
-    getCommentsFor = (parentId) => {
+    /**
+     * Retrieved comments for particular `parentId`
+     * @param {string|number} parentId
+     * @return {object|undefined}
+     */
+    getCommentsById = (parentId) => {
         return this.comments[parentId];
     }
 }

@@ -4,6 +4,9 @@ import Slider from  'react-slick';
 import ImageSection from  './ImageSection';
 import Comments from  './Comments';
 
+/**
+ * todo comment
+ */
 class Album extends React.Component {
 
     static defaultProps = {

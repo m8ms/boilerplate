@@ -9,6 +9,12 @@ import ImagesStore from '../stores/ImagesStore';
 
 import Album from '../components/Album';
 
+/**
+ * `CommentsStore -> comments` fetcher.
+ *
+ * @param {object} props - AltContainer props
+ * @param {object} props.albumId - id of album to get comments
+ */
 function comments(props) {
     return {
         store: CommentsStore,
@@ -16,6 +22,12 @@ function comments(props) {
     };
 }
 
+/**
+ * `ImagesStore -> singleAlbum` fetcher.
+ *
+ * @param {object} props - AltContainer props
+ * @param {object} props.albumId - id of album for `Album` component to display
+ */
 function album(props) {
     return {
         store: ImagesStore,
@@ -23,6 +35,12 @@ function album(props) {
     };
 }
 
+/**
+ * Displays album with comments.
+ * Listens to `ImagesStore`, `CommentsStore`.
+ *
+ * Calls for single album and comments fetch at mount.
+ */
 class AlbumPage extends React.Component {
 
     constructor(props) {

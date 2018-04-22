@@ -80,6 +80,11 @@
             "/node_modules/",
             "/__fixtures__/"
         ],
-        "setupTestFrameworkScriptFile": "./src/setupTests.js"
+        "setupTestFrameworkScriptFile": "./src/setupTests.js",
+        "collectCoverage": true,
+        "collectCoverageFrom": [
+            "src/**/*.{js,jsx}",
+            "!**/sass/**"
+        ]
     }
 }

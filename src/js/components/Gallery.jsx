@@ -4,6 +4,10 @@ import InfiniteScroll from 'react-infinite-scroller';
 import Thumbnail from  './Thumbnail';
 
 
+
+/**
+ * todo comment
+ */
 class Gallery extends React.Component {
 
     getMore = () => {

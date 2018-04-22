@@ -2,6 +2,9 @@ import React from 'react';
 import moment from 'moment';
 
 
+/**
+ * todo comment
+ */
 class Comment extends React.Component {
 
     getBemClasses() {

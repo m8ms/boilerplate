@@ -2,6 +2,10 @@ import React from 'react';
 
 import Comment from './Comment';
 
+
+/**
+ * todo comment
+ */
 class Comments extends React.Component {
 
     printComments() {

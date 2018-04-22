@@ -6,7 +6,12 @@ import ImagesStore from '../stores/ImagesStore';
 
 import ImageSection from '../components/ImageSection';
 
-
+/**
+ * `ImageStore -> singleImage` fetcher.
+ *
+ * @param {object} props - AltContainer props
+ * @param {object} props.imageId - id of image for `ImageSection` to display
+ */
 function item(props) {
     return {
         store: ImagesStore,
@@ -14,6 +19,12 @@ function item(props) {
     };
 }
 
+/**
+ * Used to display single image.
+ * Listens to `ImageStore`.
+ *
+ * Calls for single image fetch at mount.
+ */
 class ImagePage extends React.Component {
 
     constructor(props) {

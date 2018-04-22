@@ -10,4 +10,5 @@ dist/*
 /dist/
 /.babel-cache/
 .babel-cache/
+/coverage/
 stats.json

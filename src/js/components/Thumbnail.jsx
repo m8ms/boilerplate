@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
+/**
+ * todo comment
+ */
 class Gallery extends React.Component {
 
     static defaultProps = {
